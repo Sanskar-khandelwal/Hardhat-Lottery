@@ -33,3 +33,6 @@ This contract utilizes Chainlink oracle for generating the random number require
 ## Keepers
 
 The contract is completely automated and does not require any external intervention to select a winner. It utilizes Chainlink Keepers to automate the process of selecting the winner every X minute.
+
+### Final
+Once the winner is selected the total amount collected is transfered to winner account
