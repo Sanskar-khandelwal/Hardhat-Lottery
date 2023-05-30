@@ -13,32 +13,35 @@ const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY
 const GOERLI_RPC_URL = process.env.GOERLI_RPC_URL
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-    defaultNetwork: "hardhat",
-    networks: {
-        hardhat: {
-            chainId: 31337,
-            blockConfirmations: 1,
-        },
-        sepolia: {
-            chainId: 1155511,
-            blockConfirmations: 6,
-            url: SEPOLIA_RPC_URL,
-            accounts: [PRIVATE_KEY],
-        },
+  defaultNetwork: "hardhat",
+  networks: {
+    hardhat: {
+      chainId: 31337,
+      blockConfirmations: 1,
     },
-    solidity: "0.8.7",
-    namedAccounts: {
-        deployer: {
-            default: 0,
-        },
-        player: {
-            default: 1,
-        },
+    sepolia: {
+      chainId: 1155511,
+      blockConfirmations: 6,
+      url: SEPOLIA_RPC_URL,
+      accounts: [PRIVATE_KEY],
     },
-    gasReporter: {
-        enabled: false,
-        currency: "USD",
-        outputFile: "gas-report.txt",
-        noColors: true,
+  },
+  solidity: "0.8.7",
+  namedAccounts: {
+    deployer: {
+      default: 0,
     },
+    player: {
+      default: 1,
+    },
+  },
+  gasReporter: {
+    enabled: false,
+    currency: "USD",
+    outputFile: "gas-report.txt",
+    noColors: true,
+  },
+  mocha: {
+    timeout: 30000, // 200 second
+  },
 }
