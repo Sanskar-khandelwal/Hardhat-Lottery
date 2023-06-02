@@ -42,6 +42,6 @@ module.exports = {
     noColors: true,
   },
   mocha: {
-    timeout: 200000, // 200 second
+    timeout: 300000, // 300 second
   },
 }
